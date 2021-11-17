@@ -27,9 +27,9 @@ class putMean(BaseEstimator, TransformerMixin):
         # Primeiro realizamos a cópia do DataFrame 'X' de entrada
         data = X.copy()
         data['EXISTING_SAVINGS'] = data['EXISTING_SAVINGS'].\
-        replace('UNKNOWN',mean_value_esavings).astype('float')
+        replace('UNKNOWN',1365.38).astype('float')
         data['CHECKING_BALANCE'] = data['CHECKING_BALANCE'].\
-        replace('NO_CHECKING',mean_value_cbalance).astype('float')
+        replace('NO_CHECKING',518.1573).astype('float')
         return data 
 
 class Enconde(BaseEstimator, TransformerMixin):
