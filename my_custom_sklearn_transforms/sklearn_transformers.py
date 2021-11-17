@@ -1,5 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn import preprocessing
+from sklearn.preprocessing  import LabelEncoder
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
@@ -45,7 +45,7 @@ class Enconde(BaseEstimator, TransformerMixin,preprocessing):
         data = X.copy()
         data[self.columns] = \
         data[self.columns].\
-        apply(preprocessing.LabelEncoder().fit_transform) 
+        apply(LabelEncoder().fit_transform) 
 
         return data
 
