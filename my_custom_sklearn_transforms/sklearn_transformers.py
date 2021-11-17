@@ -33,7 +33,7 @@ class putMean(BaseEstimator, TransformerMixin):
         replace('NO_CHECKING',518.1573).astype('float')
         return data 
 
-class Enconde(BaseEstimator, TransformerMixin,preprocessing):
+class Enconde(BaseEstimator, TransformerMixin):
     def __init__(self,columns):
         self.columns = columns
 
